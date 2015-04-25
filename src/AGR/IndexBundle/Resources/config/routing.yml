@@ -1,0 +1,3 @@
+agr_index_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AGRIndexBundle:Default:index }

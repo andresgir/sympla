@@ -1,0 +1,7 @@
+agr_index:
+    resource: "@AGRIndexBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
