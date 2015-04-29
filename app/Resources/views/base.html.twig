@@ -1,500 +1,1838 @@
 <!DOCTYPE html>
-<html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
+Version: 3.2.0
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <title>AdminLTE 2 | Dashboard</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- Bootstrap 3.3.2 -->
-    <link href="{{ asset('tm/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- FontAwesome 4.3.0 -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons 2.0.0 -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
-    <link href="{{ asset('tm/dist/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link href="{{ asset('tm/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- iCheck -->
-    <link href="{{ asset('tm/plugins/iCheck/flat/blue.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Morris chart -->
-    <link href="{{ asset('tm/plugins/morris/morris.css') }}" rel="stylesheet" type="text/css" />
-    <!-- jvectormap -->
-    <link href="{{ asset('tm/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Date Picker -->
-    <link href="{{ asset('tm/plugins/datepicker/datepicker3.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Daterange picker -->
-    <link href="{{ asset('tm/plugins/daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css" />
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link href="{{ asset('tm/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="utf-8"/>
+    <title>Metronic | General Portlets</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css">
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="{{ asset('tm/assets/global/css/components-rounded.css') }}" id="style_components" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/global/css/plugins.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/admin/layout3/css/layout.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('tm/assets/admin/layout3/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color">
+    <link href="{{ asset('tm/assets/admin/layout3/css/custom.css') }}" rel="stylesheet" type="text/css">
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="{{ asset('tm/favicon.ico') }}"/>
 </head>
-<body class="skin-blue">
-<div class="wrapper">
-
-<header class="main-header">
-<!-- Logo -->
-<a href="index2.html" class="logo"><b>Admin</b>LTE</a>
-<!-- Header Navbar: style can be found in header.less -->
-<nav class="navbar navbar-static-top" role="navigation">
-<!-- Sidebar toggle button-->
-<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-    <span class="sr-only">Toggle navigation</span>
-</a>
-<div class="navbar-custom-menu">
-<ul class="nav navbar-nav">
-<!-- Messages: style can be found in dropdown.less-->
-<li class="dropdown messages-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <i class="fa fa-envelope-o"></i>
-        <span class="label label-success">4</span>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-menu-fixed" class to set the mega menu fixed  -->
+<!-- DOC: Apply "page-header-top-fixed" class to set the top menu fixed  -->
+<body>
+<!-- BEGIN HEADER -->
+<div class="page-header" style="height: 75px;">
+<!-- BEGIN HEADER TOP -->
+<div class="page-header-top">
+<div class="container">
+<!-- BEGIN LOGO -->
+<div class="page-logo">
+    <a href="{{ asset('tm/index.html') }}"><img src="{{ asset('tm/assets/admin/layout3/img/logo-default.png') }}" alt="logo" class="logo-default"></a>
+</div>
+<!-- END LOGO -->
+<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+<a href="javascript:;" class="menu-toggler"></a>
+<!-- END RESPONSIVE MENU TOGGLER -->
+<!-- BEGIN TOP NAVIGATION MENU -->
+<div class="top-menu">
+<ul class="nav navbar-nav pull-right">
+<!-- BEGIN NOTIFICATION DROPDOWN -->
+<li class="dropdown dropdown-extended dropdown-dark dropdown-notification" id="header_notification_bar">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        <i class="icon-bell"></i>
+        <span class="badge badge-default">7</span>
     </a>
     <ul class="dropdown-menu">
-        <li class="header">You have 4 messages</li>
+        <li class="external">
+            <h3>You have <strong>12 pending</strong> tasks</h3>
+            <a href="javascript:;">view all</a>
+        </li>
         <li>
-            <!-- inner menu: contains the actual data -->
-            <ul class="menu">
-                <li><!-- start message -->
-                    <a href="#">
-                        <div class="pull-left">
-                            <img src="{{ asset('tm/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image"/>
-                        </div>
-                        <h4>
-                            Support Team
-                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                        </h4>
-                        <p>Why not buy a new awesome theme?</p>
-                    </a>
-                </li><!-- end message -->
+            <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
                 <li>
-                    <a href="#">
-                        <div class="pull-left">
-                            <img src="{{ asset('tm/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="user image"/>
-                        </div>
-                        <h4>
-                            AdminLTE Design Team
-                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                        </h4>
-                        <p>Why not buy a new awesome theme?</p>
+                    <a href="javascript:;">
+                        <span class="time">just now</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-success">
+										<i class="fa fa-plus"></i>
+										</span>
+										New user registered. </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <div class="pull-left">
-                            <img src="{{ asset('tm/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="user image"/>
-                        </div>
-                        <h4>
-                            Developers
-                            <small><i class="fa fa-clock-o"></i> Today</small>
-                        </h4>
-                        <p>Why not buy a new awesome theme?</p>
+                    <a href="javascript:;">
+                        <span class="time">3 mins</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-danger">
+										<i class="fa fa-bolt"></i>
+										</span>
+										Server #12 overloaded. </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <div class="pull-left">
-                            <img src="{{ asset('tm/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="user image"/>
-                        </div>
-                        <h4>
-                            Sales Department
-                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                        </h4>
-                        <p>Why not buy a new awesome theme?</p>
+                    <a href="javascript:;">
+                        <span class="time">10 mins</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-warning">
+										<i class="fa fa-bell-o"></i>
+										</span>
+										Server #2 not responding. </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <div class="pull-left">
-                            <img src="{{ asset('tm/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="user image"/>
-                        </div>
-                        <h4>
-                            Reviewers
-                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                        </h4>
-                        <p>Why not buy a new awesome theme?</p>
+                    <a href="javascript:;">
+                        <span class="time">14 hrs</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-info">
+										<i class="fa fa-bullhorn"></i>
+										</span>
+										Application error. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="time">2 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-danger">
+										<i class="fa fa-bolt"></i>
+										</span>
+										Database overloaded 68%. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="time">3 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-danger">
+										<i class="fa fa-bolt"></i>
+										</span>
+										A user IP blocked. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="time">4 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-warning">
+										<i class="fa fa-bell-o"></i>
+										</span>
+										Storage Server #4 not responding dfdfdfd. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="time">5 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-info">
+										<i class="fa fa-bullhorn"></i>
+										</span>
+										System Error. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="time">9 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-danger">
+										<i class="fa fa-bolt"></i>
+										</span>
+										Storage server failed. </span>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="footer"><a href="#">See All Messages</a></li>
     </ul>
 </li>
-<!-- Notifications: style can be found in dropdown.less -->
-<li class="dropdown notifications-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <i class="fa fa-bell-o"></i>
-        <span class="label label-warning">10</span>
+<!-- END NOTIFICATION DROPDOWN -->
+<!-- BEGIN TODO DROPDOWN -->
+<li class="dropdown dropdown-extended dropdown-dark dropdown-tasks" id="header_task_bar">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        <i class="icon-calendar"></i>
+        <span class="badge badge-default">3</span>
     </a>
-    <ul class="dropdown-menu">
-        <li class="header">You have 10 notifications</li>
+    <ul class="dropdown-menu extended tasks">
+        <li class="external">
+            <h3>You have <strong>12 pending</strong> tasks</h3>
+            <a href="javascript:;">view all</a>
+        </li>
         <li>
-            <!-- inner menu: contains the actual data -->
-            <ul class="menu">
+            <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
                 <li>
-                    <a href="#">
-                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">New release v1.2 </span>
+										<span class="percent">30%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">40% Complete</span></span>
+										</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">Application deployment</span>
+										<span class="percent">65%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">65% Complete</span></span>
+										</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-users text-red"></i> 5 new members joined
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">Mobile app release</span>
+										<span class="percent">98%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">98% Complete</span></span>
+										</span>
                     </a>
                 </li>
-
                 <li>
-                    <a href="#">
-                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">Database migration</span>
+										<span class="percent">10%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">10% Complete</span></span>
+										</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-user text-red"></i> You changed your username
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">Web server upgrade</span>
+										<span class="percent">58%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">58% Complete</span></span>
+										</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">Mobile development</span>
+										<span class="percent">85%</span>
+										</span>
+										<span class="progress">
+										<span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">85% Complete</span></span>
+										</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+										<span class="task">
+										<span class="desc">New UI release</span>
+										<span class="percent">38%</span>
+										</span>
+										<span class="progress progress-striped">
+										<span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">38% Complete</span></span>
+										</span>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="footer"><a href="#">View all</a></li>
     </ul>
 </li>
-<!-- Tasks: style can be found in dropdown.less -->
-<li class="dropdown tasks-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <i class="fa fa-flag-o"></i>
-        <span class="label label-danger">9</span>
+<!-- END TODO DROPDOWN -->
+<li class="droddown dropdown-separator">
+    <span class="separator"></span>
+</li>
+<!-- BEGIN INBOX DROPDOWN -->
+<li class="dropdown dropdown-extended dropdown-dark dropdown-inbox" id="header_inbox_bar">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        <span class="circle">3</span>
+        <span class="corner"></span>
     </a>
     <ul class="dropdown-menu">
-        <li class="header">You have 9 tasks</li>
+        <li class="external">
+            <h3>You have <strong>7 New</strong> Messages</h3>
+            <a href="javascript:;">view all</a>
+        </li>
         <li>
-            <!-- inner menu: contains the actual data -->
-            <ul class="menu">
-                <li><!-- Task item -->
-                    <a href="#">
-                        <h3>
-                            Design some buttons
-                            <small class="pull-right">20%</small>
-                        </h3>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only">20% Complete</span>
-                            </div>
-                        </div>
+            <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                <li>
+                    <a href="inbox.html?a=view">
+										<span class="photo">
+										<img src="../../assets/admin/layout3/img/avatar2.jpg" class="img-circle" alt="">
+										</span>
+										<span class="subject">
+										<span class="from">
+										Lisa Wong </span>
+										<span class="time">Just Now </span>
+										</span>
+										<span class="message">
+										Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
                     </a>
-                </li><!-- end task item -->
-                <li><!-- Task item -->
-                    <a href="#">
-                        <h3>
-                            Create a nice theme
-                            <small class="pull-right">40%</small>
-                        </h3>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only">40% Complete</span>
-                            </div>
-                        </div>
+                </li>
+                <li>
+                    <a href="inbox.html?a=view">
+										<span class="photo">
+										<img src="../../assets/admin/layout3/img/avatar3.jpg" class="img-circle" alt="">
+										</span>
+										<span class="subject">
+										<span class="from">
+										Richard Doe </span>
+										<span class="time">16 mins </span>
+										</span>
+										<span class="message">
+										Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
                     </a>
-                </li><!-- end task item -->
-                <li><!-- Task item -->
-                    <a href="#">
-                        <h3>
-                            Some task I need to do
-                            <small class="pull-right">60%</small>
-                        </h3>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only">60% Complete</span>
-                            </div>
-                        </div>
+                </li>
+                <li>
+                    <a href="inbox.html?a=view">
+										<span class="photo">
+										<img src="../../assets/admin/layout3/img/avatar1.jpg" class="img-circle" alt="">
+										</span>
+										<span class="subject">
+										<span class="from">
+										Bob Nilson </span>
+										<span class="time">2 hrs </span>
+										</span>
+										<span class="message">
+										Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
                     </a>
-                </li><!-- end task item -->
-                <li><!-- Task item -->
-                    <a href="#">
-                        <h3>
-                            Make beautiful transitions
-                            <small class="pull-right">80%</small>
-                        </h3>
-                        <div class="progress xs">
-                            <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                <span class="sr-only">80% Complete</span>
-                            </div>
-                        </div>
+                </li>
+                <li>
+                    <a href="inbox.html?a=view">
+										<span class="photo">
+										<img src="../../assets/admin/layout3/img/avatar2.jpg" class="img-circle" alt="">
+										</span>
+										<span class="subject">
+										<span class="from">
+										Lisa Wong </span>
+										<span class="time">40 mins </span>
+										</span>
+										<span class="message">
+										Vivamus sed auctor 40% nibh congue nibh... </span>
                     </a>
-                </li><!-- end task item -->
+                </li>
+                <li>
+                    <a href="inbox.html?a=view">
+										<span class="photo">
+										<img src="../../assets/admin/layout3/img/avatar3.jpg" class="img-circle" alt="">
+										</span>
+										<span class="subject">
+										<span class="from">
+										Richard Doe </span>
+										<span class="time">46 mins </span>
+										</span>
+										<span class="message">
+										Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                    </a>
+                </li>
             </ul>
         </li>
-        <li class="footer">
-            <a href="#">View all tasks</a>
-        </li>
     </ul>
 </li>
-<!-- User Account: style can be found in dropdown.less -->
-<li class="dropdown user user-menu">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <img src="{{ asset('tm/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image"/>
-        <span class="hidden-xs">Alexander Pierce</span>
+<!-- END INBOX DROPDOWN -->
+<!-- BEGIN USER LOGIN DROPDOWN -->
+<li class="dropdown dropdown-user dropdown-dark">
+    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        <img alt="" class="img-circle" src="{{ asset('tm/assets/admin/layout3/img/bolton.png') }}">
+        <span class="username username-hide-mobile">Bolton</span>
+        <i class="fa fa-angle-down"></i>
     </a>
-    <ul class="dropdown-menu">
-        <!-- User image -->
-        <li class="user-header">
-            <img src="{{ asset('tm/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image" />
-            <p>
-                Alexander Pierce - Web Developer
-                <small>Member since Nov. 2012</small>
-            </p>
+    <ul class="dropdown-menu dropdown-menu-default">
+        <li>
+            <a href="extra_profile.html">
+                <i class="icon-user"></i> My Profile </a>
         </li>
-        <!-- Menu Body -->
-        <li class="user-body">
-            <div class="col-xs-4 text-center">
-                <a href="#">Followers</a>
-            </div>
-            <div class="col-xs-4 text-center">
-                <a href="#">Sales</a>
-            </div>
-            <div class="col-xs-4 text-center">
-                <a href="#">Friends</a>
-            </div>
+        <li>
+            <a href="page_calendar.html">
+                <i class="icon-calendar"></i> My Calendar </a>
         </li>
-        <!-- Menu Footer-->
-        <li class="user-footer">
-            <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
-            </div>
-            <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">Sign out</a>
-            </div>
+        <li>
+            <a href="inbox.html">
+                <i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
+								3 </span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
+								7 </span>
+            </a>
+        </li>
+        <li class="divider">
+        </li>
+        <li>
+            <a href="extra_lock.html">
+                <i class="icon-lock"></i> Lock Screen </a>
+        </li>
+        <li>
+            <a href="login.html">
+                <i class="icon-key"></i> Log Out </a>
         </li>
     </ul>
 </li>
+<!-- END USER LOGIN DROPDOWN -->
 </ul>
 </div>
-</nav>
-</header>
-<!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
-                <img src="{{ asset('tm/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image" />
-            </div>
-            <div class="pull-left info">
-                <p>Alexander Pierce</p>
+<!-- END TOP NAVIGATION MENU -->
+</div>
+</div>
+<!-- END HEADER TOP -->
 
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+</div>
+<!-- END HEADER -->
+<!-- BEGIN PAGE CONTAINER -->
+<div class="page-container">
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head" style="
+    background: #E0E3E7;
+    padding-top: 10px;
+    padding-bottom: 46px;
+">
+    <div class="container">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1>Crear evento <small>general portlet samples {% block body %} {% endblock %} </small></h1>
+        </div>
+        <!-- END PAGE TITLE -->
+        <!-- BEGIN PAGE TOOLBAR -->
+        <div class="page-toolbar">
+            <!-- BEGIN THEME PANEL -->
+            <div class="btn-group btn-theme-panel">
+                <a href="javascript:;" class="btn dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-settings"></i>
+                </a>
+                <div class="dropdown-menu theme-panel pull-right dropdown-custom hold-on-click">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h3>THEME COLORS</h3>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <ul class="theme-colors">
+                                        <li class="theme-color theme-color-default" data-theme="default">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Default</span>
+                                        </li>
+                                        <li class="theme-color theme-color-blue-hoki" data-theme="blue-hoki">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Blue Hoki</span>
+                                        </li>
+                                        <li class="theme-color theme-color-blue-steel" data-theme="blue-steel">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Blue Steel</span>
+                                        </li>
+                                        <li class="theme-color theme-color-yellow-orange" data-theme="yellow-orange">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Orange</span>
+                                        </li>
+                                        <li class="theme-color theme-color-yellow-crusta" data-theme="yellow-crusta">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Yellow Crusta</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <ul class="theme-colors">
+                                        <li class="theme-color theme-color-green-haze" data-theme="green-haze">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Green Haze</span>
+                                        </li>
+                                        <li class="theme-color theme-color-red-sunglo" data-theme="red-sunglo">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Red Sunglo</span>
+                                        </li>
+                                        <li class="theme-color theme-color-red-intense" data-theme="red-intense">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Red Intense</span>
+                                        </li>
+                                        <li class="theme-color theme-color-purple-plum" data-theme="purple-plum">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Purple Plum</span>
+                                        </li>
+                                        <li class="theme-color theme-color-purple-studio" data-theme="purple-studio">
+                                            <span class="theme-color-view"></span>
+                                            <span class="theme-color-name">Purple Studio</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 seperator">
+                            <h3>LAYOUT</h3>
+                            <ul class="theme-settings">
+                                <li>
+                                    Theme Style
+                                    <select class="theme-setting theme-setting-style form-control input-sm input-small input-inline tooltips" data-original-title="Change theme style" data-container="body" data-placement="left">
+                                        <option value="boxed" selected="selected">Square corners</option>
+                                        <option value="rounded">Rounded corners</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Layout
+                                    <select class="theme-setting theme-setting-layout form-control input-sm input-small input-inline tooltips" data-original-title="Change layout type" data-container="body" data-placement="left">
+                                        <option value="boxed" selected="selected">Boxed</option>
+                                        <option value="fluid">Fluid</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Top Menu Style
+                                    <select class="theme-setting theme-setting-top-menu-style form-control input-sm input-small input-inline tooltips" data-original-title="Change top menu dropdowns style" data-container="body" data-placement="left">
+                                        <option value="dark" selected="selected">Dark</option>
+                                        <option value="light">Light</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Top Menu Mode
+                                    <select class="theme-setting theme-setting-top-menu-mode form-control input-sm input-small input-inline tooltips" data-original-title="Enable fixed(sticky) top menu" data-container="body" data-placement="left">
+                                        <option value="fixed">Fixed</option>
+                                        <option value="not-fixed" selected="selected">Not Fixed</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Mega Menu Style
+                                    <select class="theme-setting theme-setting-mega-menu-style form-control input-sm input-small input-inline tooltips" data-original-title="Change mega menu dropdowns style" data-container="body" data-placement="left">
+                                        <option value="dark" selected="selected">Dark</option>
+                                        <option value="light">Light</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    Mega Menu Mode
+                                    <select class="theme-setting theme-setting-mega-menu-mode form-control input-sm input-small input-inline tooltips" data-original-title="Enable fixed(sticky) mega menu" data-container="body" data-placement="left">
+                                        <option value="fixed" selected="selected">Fixed</option>
+                                        <option value="not-fixed">Not Fixed</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END THEME PANEL -->
+        </div>
+        <!-- END PAGE TOOLBAR -->
+    </div>
+</div>
+<!-- END PAGE HEAD -->
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+<div class="container">
+<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                Widget settings form goes here
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn blue">Save changes</button>
+                <button type="button" class="btn default" data-dismiss="modal">Close</button>
             </div>
         </div>
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
-              <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-        </form>
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Layout Options</span>
-                    <span class="label label-primary pull-right">4</span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="pages/widgets.html">
-                    <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-pie-chart"></i>
-                    <span>Charts</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                    <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-laptop"></i>
-                    <span>UI Elements</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                    <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                    <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                    <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                    <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                    <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i> <span>Forms</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-table"></i> <span>Tables</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                    <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="pages/calendar.html">
-                    <i class="fa fa-calendar"></i> <span>Calendar</span>
-                    <small class="label pull-right bg-red">3</small>
-                </a>
-            </li>
-            <li>
-                <a href="pages/mailbox/mailbox.html">
-                    <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                    <small class="label pull-right bg-yellow">12</small>
-                </a>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-folder"></i> <span>Examples</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                    <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                    <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                    <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                    <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                    <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                    <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-share"></i> <span>Multilevel</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                    <li>
-                        <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                            <li>
-                                <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                </ul>
-            </li>
-            <li><a href="documentation/index.html"><i class="fa fa-book"></i> Documentation</a></li>
-            <li class="header">LABELS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-danger"></i> Important</a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-warning"></i> Warning</a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-info"></i> Information</a></li>
-        </ul>
-    </section>
-    <!-- /.sidebar -->
-</aside>
-
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-
-    {% block body %}{% endblock %}
-
-</div><!-- /.content-wrapper -->
-<footer class="main-footer">
-    <div class="pull-right hidden-xs">
-        <b>Version</b> 2.0
+        <!-- /.modal-content -->
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-</footer>
-</div><!-- ./wrapper -->
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset('tm/plugins/jQuery/jQuery-2.1.3.min.js') }}"></script>
-<!-- jQuery UI 1.11.2 -->
-<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="text/javascript"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- BEGIN PAGE CONTENT INNER -->
+
+
+<div class="row">
+<div class="col-md-12">
+<!-- BEGIN MAIN PORTLET-->
+<div class="panel panel-primary" style="margin-top: -45px;border: none;background-color: #f2f2f2;">
+
+<div class="panel-body" style="padding: 30px;border-radius: 4px 4px 4px 4px;">
+
+<div class="row">
+<div class="col-md-12 ">
+    <!-- BEGIN NAME AND IMAGE PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>1. Nombre e imagen del evento
+            </div>
+
+        </div>
+        <div class="panel-body">
+
+            <fieldset>
+
+                <!-- Hidden Block with image Options-->
+
+                <div class="col-md-4">
+
+                    <div id="collapseOne" class="panel-collapse collapse">
+
+                        <div class="panel-group" id="image">
+                            <div class="panel panel-default">
+
+                                <label class="radio-inline active" for="example-inline-radio1">
+                                    <input type="radio" data-toggle="collapse" data-parent="#image" checked data-target="#image1" id="example-inline-radio1" name="example-inline-radios" value="option1">Logo</label>
+
+                                <label class="radio-inline active" for="example-inline-radio2">
+                                    <input type="radio" data-toggle="collapse" data-parent="#image" data-target="#image2" id="example-inline-radio2" name="example-inline-radios" value="option2">Banner</label>
+
+                                <div class="form-group">
+
+                                    <div class="col-md-9">
+                                        <input type="file" id="example-file-input" name="example-file-input"></div>
+
+                                </div>
+
+                                <div id="image1" class="panel-collapse collapse in">
+                                    <div class="alert alert-info alert-dismissable">
+
+                                        <h4>
+                                            <i class="fa fa-info-circle"></i>
+                                            Tamaño del logo
+                                        </h4>
+                                        Today is a nice
+                                        <a href="javascript:void(0)" class="alert-link">day</a>
+                                        !
+                                    </div>
+                                </div>
+
+                                <div id="image2" class="panel-collapse collapse">
+                                    <div class="alert alert-info alert-dismissable">
+
+                                        <h4>
+                                            <i class="fa fa-info-circle"></i>
+                                            Info del banner
+                                        </h4>
+                                        Today is a nice
+                                        <a href="javascript:void(0)" class="alert-link">day</a>
+                                        !
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- END Hidden Block with image Options-->
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Nombre del evento</label>
+                    <div class="col-md-8">
+                        <div class="input-icon right">
+                            <i class="fa fa-microphone"></i>
+                            <input type="text" class="form-control" placeholder="Nombre como lo verán sus compradores en el sitio publicado en línea">
+                        </div>
+                        <div class="checkbox">
+                            <label data-toggle="collapse" data-target="#collapseOne">
+                                <input type="checkbox"/>
+                                Incluir imagen o banner
+                            </label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+            </fieldset>
+
+        </div>
+    </div>
+    <!-- END NAME AND IMAGE PORTLET-->
+</div>
+<div class="col-md-8 ">
+    <!-- BEGIN START AND END DATE PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>2. Cuando?
+            </div>
+
+        </div>
+        <div class="panel-body">
+
+            <fieldset>
+
+                <div class="form-group">
+
+                    <!-- /input-group -->
+											<span class="help-block" style="padding-left: 15px;">
+											Inicio del evento </span>
+
+                    <div class="col-md-6">
+                        <div class="input-group input-medium date date-picker" data-date-format="dd-mm-yyyy" data-date-start-date="+0d">
+                            <input type="text" class="form-control" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control timepicker timepicker-no-seconds">
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-clock-o"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <!-- /input-group -->
+											<span class="help-block" style="padding-left: 15px;">
+											Final del evento </span>
+
+                    <div class="col-md-6">
+                        <div class="input-group input-medium date date-picker" data-date-format="dd-mm-yyyy" data-date-start-date="+0d">
+                            <input type="text" class="form-control" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control timepicker timepicker-no-seconds">
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-clock-o"></i></button>
+												</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+        </div>
+    </div>
+    <!-- END START AND END DATE PORTLET-->
+</div>
+<div class="col-md-4 ">
+    <!-- BEGIN LOCATION PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>4. Donde?
+            </div>
+
+        </div>
+        <div class="panel-body" style="display: block;">
+
+
+            <!-- Hidden location Options-->
+
+
+            <div class="form-group">
+
+                <div class="col-md-12">
+                    <select id="example-select2" name="example-select2" class="form-control select2me" data-placeholder="Choose one..">
+                        <option>Escoge una</option>
+                        <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                        <option value="1">última dirección registrada</option>
+                        <option value="2">Registrar nueva dirección</option>
+                        <option value="3">Evento online</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="MySQL">MySQL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="register-new-location" class="panel-collapse collapse">
+
+                <div class="col-md-12">
+                    <div class="col-sm-12">
+                        <!-- Input Sizes Block -->
+                        <div class="block">
+                            <!-- Input Sizes Title -->
+                            <div class="block-title">
+                                <h2>
+                                    Input
+                                    <strong>Sizes</strong>
+                                </h2>
+                            </div>
+                            <!-- END Input Sizes Title -->
+
+                            <!-- Input Sizes Content -->
+
+                            <div class="form-group">
+                                <label class="col-sm-3" for="example-input-small">Local</label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm" placeholder=".input-sm"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="example-input-normal">Dirección</label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="Normal"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="example-input-large">Barrio</label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="example-input-large" name="example-input-large" class="form-control input-lg" placeholder=".input-lg"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Ciudad</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder=".col-sm-3"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="example-select2">Departamento</label>
+                                <div class="col-md-6">
+                                    <select id="example-select2" name="example-select2" class="select-chosen" style="width: 100%;" data-placeholder="Choose one..">
+                                        <option></option>
+                                        <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                        <option value="1">Antioquia</option>
+                                        <option value="3">Córdoba</option>
+                                        <option value="4">Evento online</option>
+                                        <option value="Javascript">Javascript</option>
+                                        <option value="PHP">PHP</option>
+                                        <option value="MySQL">MySQL</option>
+                                    </select>
+                                </div>
+
+                                <!-- Hidden Google Maps Options-->
+
+                                <div class="col-md-12">
+
+                                    <div class="checkbox">
+                                        <label data-toggle="collapse" data-target="#googlemaps">
+                                            <input type="checkbox"/>
+                                            Mostrar mapa en Google Maps (Recomendado)
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div id="googlemaps" class="panel-collapse collapse">
+
+                                    <div class="col-md-9">
+                                        <div class="alert alert-info alert-dismissable">
+
+                                            <h4>
+                                                <i class="fa fa-info-circle"></i>
+                                                Aqui va el Google Map
+                                            </h4>
+                                            Today is a nice
+                                            <a href="javascript:void(0)" class="alert-link">day</a>
+                                            !
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- END Google Maps Options--> </div>
+
+                            <!-- END Input Sizes Content --> </div>
+                        <!-- END Input Sizes Block --> </div>
+                </div>
+
+            </div>
+
+            <!-- END location Options-->
+
+
+        </div>
+    </div>
+    <!-- END LOCATION PORTLET-->
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 ">
+<!-- BEGIN TICKETS PORTLET-->
+<div class="panel panel-primary">
+<div class="panel-heading">
+    <div class="panel-title">
+        <i class="fa fa-gift"></i>3. Tiquetes
+    </div>
+
+</div>
+<div class="panel-body">
+
+
+<fieldset>
+
+<!-- Interactive Content -->
+<!-- The content you will put inside div.block-content, will be toggled -->
+
+
+<div class="table-responsive">
+    <!--
+Available Table Classes:
+'table'             - basic table
+'table-bordered'    - table with full borders
+'table-borderless'  - table with no borders
+'table-striped'     - striped table
+'table-condensed'   - table with smaller top and bottom cell padding
+'table-hover'       - rows highlighted on mouse hover
+'table-vcenter'     - middle align content vertically
+-->
+    <table id="myTableData" class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th class="text-center">Tipo</th>
+            <th class="text-center">Precio</th>
+            <th>Tasa</th>
+            <th>Precio final</th>
+            <th>Cantidad</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr></tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6"></td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+<div class="panel-group" id="create-ticket">
+
+
+<div id="finishedCreatingTicket" class="panel-collapse collapse">
+
+    <button type="button" href="#creatingTicket" class="btn btn-sm btn-primary" onclick='creator.createTicket();'>Crear tiquete</button>
+
+
+</div>
+
+<div id="creatingTicket" class="panel-collapse collapse in">
+
+<span id="spanCreatingNewTicket">Creando nuevo tiquete</span>
+(
+<a id="aIDontWantCreateMoreTickets" href="#Foo" onclick="creator.setFormVisibility(false);">No quiero crear mas tiquetes</a>
+)
+
+
+
+
+<div class="form-group">
+    <input type="hidden" id="ticketId" value="0" />
+    <label class="col-md-4 control-label" for="val_username">
+        Tipo de tiquete
+        <span class="text-danger">*</span>
+    </label>
+
+
+
+    <div class="col-md-6">
+        <div class="input-icon right">
+            <i class="fa fa-microphone"></i>
+            <input type="text" id="ticketName" name="val_username" class="form-control" placeholder="VIP, Femenino, Lote 1, etc...">
+
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="val_number">
+        Precio
+        <span class="text-danger">*</span>
+    </label>
+
+    <!-- Hidden Price Options-->
+
+    <div id="isfree" class="panel-collapse collapse in">
+
+        <div class="col-md-6">
+            <div class="input-icon right">
+                <i class="fa fa-microphone"></i>
+                <input type="text" id="price" name="val_number" class="form-control" placeholder="1.0">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-2">
+
+        <div class="checkbox">
+            <label data-toggle="collapse" data-target="#isfree">
+                <input type="checkbox" id="isFree"/>
+                Gratis
+            </label>
+        </div>
+
+    </div>
+
+    <!-- END Price Options-->
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="val_digits">
+        Cantidad
+        <span class="text-danger">*</span>
+    </label>
+    <div class="col-md-6">
+        <div class="input-icon right">
+            <i class="fa fa-microphone"></i>
+            <input type="text" id="quantity" name="val_digits" class="form-control" placeholder="1">
+
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="val_number">
+        Opciones avanzadas
+        <span class="text-danger">*</span>
+    </label>
+    <div class="col-md-8">
+        <div class="input-group">
+
+            <!-- Advanced ticket options -->
+
+            <div class="panel-group" id="advanced-ticket-options">
+                <div class="panel">
+
+                    <div id="showoptions" class="panel-collapse collapse in">
+
+                        <a href="#Foo" data-toggle="collapse" data-parent="#advanced-ticket-options" data-target="#hideoptions" onclick="creator.setAdvancedOptionsVisibility(true);">Mostrar</a>
+
+                    </div>
+
+                    <div id="hideoptions" class="panel-collapse collapse">
+
+                        <h4>
+
+                            <a href="#Foo" data-toggle="collapse" data-parent="#advanced-ticket-options" data-target="#showoptions" onclick="creator.setAdvancedOptionsVisibility(false);">Ocultar</a>
+                        </h4>
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="example-text-input">Descripción</label>
+                            <div class="col-md-9">
+                                <div class="input-icon right">
+                                    <i class="fa fa-microphone"></i>
+                                    <input type="text" id="description" class="form-control" placeholder="Right icon">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <!-- /input-group -->
+											<span class="help-block" style="padding-left: 15px;">
+											Inicio de las ventas </span>
+
+                            <div class="col-md-6">
+                                <div class="input-group input-medium date date-picker" data-date-format="dd-mm-yyyy" data-date-start-date="+0d">
+                                    <input type="text" id="saleStartDate" class="form-control" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" id="saleStartTime" class="form-control timepicker timepicker-no-seconds">
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-clock-o"></i></button>
+												</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <!-- /input-group -->
+											<span class="help-block" style="padding-left: 15px;">
+											Inicio de las ventas </span>
+
+                            <div class="col-md-6">
+                                <div class="input-group input-medium date date-picker" data-date-format="dd-mm-yyyy" data-date-start-date="+0d">
+                                    <input type="text" id="saleEndDate" class="form-control" readonly>
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" id="saleEndTime" class="form-control timepicker timepicker-no-seconds">
+												<span class="input-group-btn">
+												<button class="btn default" type="button"><i class="fa fa-clock-o"></i></button>
+												</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="val_number">
+                                Cantidad mínima
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-3">
+                                <div class="input-icon right">
+                                    <i class="fa fa-microphone"></i>
+                                    <input type="text" id="minQuantity" class="form-control" placeholder="Right icon">
+                                </div>
+                            </div>
+
+                            <label class="col-md-3 control-label" for="val_number">
+                                Cantidad máxima
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-3">
+                                <div class="input-icon right">
+                                    <i class="fa fa-microphone"></i>
+                                    <input type="text" id="maxQuantity" class="form-control" placeholder="Right icon">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="val_number">
+                                Privacidad
+                                <span class="text-danger">*</span>
+                            </label>
+                            <div class="col-md-8">
+
+                                <!-- Hidden Privacy Options-->
+
+                                <div class="col-md-12">
+
+                                    <div class="checkbox">
+                                        <label data-toggle="collapse" data-target="#onlyinvited">
+                                            <input type="checkbox" id="onlyForGuests"/>
+                                            Tiquete solo disponible para invitados
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div id="onlyinvited" class="panel-collapse collapse">
+
+                                    <div class="form-group">
+
+                                        <div class="input-group">
+                                            <div class="icheck-list">
+                                                <label>
+                                                    <input type="radio"  name="radio1" checked class="icheck"> Invitación personal por email </label>
+                                                <label>
+                                                    <input type="radio"  name="radio1" class="icheck"> Link único para compartir </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- END Privacy Options--> </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- END Advanced ticket options -->
+
+
+
+                <!-- START CREATE TICKET ACTIONS -->
+
+                <div class="form-group form-actions">
+
+                    <br>
+
+                    <div class="col-md-12" style="
+    padding-bottom: 20px;
+">
+                        <button type="button" id="add" value="Add" class="btn btn-sm btn-primary"><i class="fa fa-arrow-right"></i>Crear tiquete</button>
+                        <a href="#Foo" onclick="creator.setFormVisibility(false);">Cerrar</a>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- END CREATE TICKET ACTIONS -->
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+<div class="form-group">
+
+
+    <div class="col-xs-12" style="border-top: 1px solid #e5e5e5;padding-top: 20px;
+">
+
+
+        <input type="checkbox" id="inform-absorbServiceFee" name="example-inline-checkbox1" value="option1">
+
+
+        <span>Absorber costo de servicio</span>
+
+    </div>
+
+</div>
+
+
+</fieldset>
+
+</div>
+</div>
+<!-- END TICKETS PORTLET-->
+</div>
+<div class="col-md-4 ">
+    <!-- BEGIN ORGANIZER PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>6. Organizador
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <!-- Organizer Options-->
+
+
+            <div class="form-group">
+
+                <div class="col-md-12">
+                    <select id="example-select2" name="example-select2" class="form-control select2me" data-placeholder="Choose one..">
+                        <option> Escoge una dirección</option>
+                        <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                        <option value="1">último organizador registrado</option>
+                        <option value="2">Registrar nuevo organizador</option>
+                        <option value="3">Evento online</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="MySQL">MySQL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="register-new-organizer" class="panel-collapse collapse">
+
+                <div class="col-md-12">
+                    <div class="col-sm-12">
+                        <!-- Input Sizes Block -->
+                        <div class="block">
+                            <!-- Input Sizes Title -->
+                            <div class="block-title">
+                                <h2>
+                                    Input
+                                    <strong>Sizes</strong>
+                                </h2>
+                            </div>
+                            <!-- END Input Sizes Title -->
+
+                            <!-- Input Sizes Content -->
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="example-input-small">Nombre</label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="example-input-small" name="example-input-small" class="form-control input-sm" placeholder=".input-sm"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="example-input-large">Descripción</label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="example-input-large" name="example-input-large" class="form-control input-lg" placeholder=".input-lg"></div>
+                            </div>
+
+                            <!-- END Input Sizes Content --> </div>
+                        <!-- END Input Sizes Block --> </div>
+                </div>
+
+            </div>
+
+            <!-- END organizer Options-->
+        </div>
+    </div>
+    <!-- END ORGANIZER PORTLET-->
+</div>
+
+
+<div class="col-md-8 ">
+    <!-- BEGIN ORGANIZER PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>5. Descripción
+            </div>
+
+        </div>
+        <div class="panel-body">
+
+            <div class="form-group">
+
+                <div class="">
+                    <div name="summernote" id="summernote_1">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END ORGANIZER PORTLET-->
+</div>
+
+
+<div class="col-md-4 ">
+    <!-- BEGIN LAYPUT PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>7. Apariencia
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <!-- Grid Blocks Content -->
+
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+
+                        <label class="radio-inline active" for="template1">
+                            <input type="radio" data-toggle="collapse" data-parent="#accordion" checked data-target="#collapse1" id="template1" name="inline-radios" value="template1">Seleccione un tema ya listo</label>
+
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <!-- With Animation and Info Carousel Content -->
+                            <div id="example-carousel" class="carousel slide">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#example-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#example-carousel" data-slide-to="1"></li>
+                                    <li data-target="#example-carousel" data-slide-to="2"></li>
+                                    <li data-target="#example-carousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- END Indicators -->
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <img src="{{ asset('tm/img/placeholders/photos/photo20.jpg') }}" alt="image">
+                                        <div class="carousel-panel-title">
+                                            <p>panel-title..</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ asset('tm/img/placeholders/photos/photo19.jpg') }}" alt="image">
+                                        <div class="carousel-panel-title">
+                                            <p>panel-title..</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ asset('tm/img/placeholders/photos/photo18.jpg') }}" alt="image">
+                                        <div class="carousel-panel-title">
+                                            <p>panel-title..</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ asset('tm/img/placeholders/photos/photo22.jpg') }}" alt="image">
+                                        <div class="carousel-panel-title">
+                                            <p>panel-title..</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Wrapper for slides -->
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#example-carousel" data-slide="prev">
+                                                                <span>
+                                                                    <i class="fa fa-chevron-left"></i>
+                                                                </span>
+                                </a>
+                                <a class="right carousel-control" href="#example-carousel" data-slide="next">
+                                                                <span>
+                                                                    <i class="fa fa-chevron-right"></i>
+                                                                </span>
+                                </a>
+                                <!-- END Controls --> </div>
+                            <!-- END With Animation and Info Carousel Content --> </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label class="radio-inline active" for="template2">
+                            <input type="radio" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2" id="template2" name="inline-radios" value="template2">Personaliza el tuyo</label>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-md-6 control-label">Escoge el color base</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="position-top-right" class="form-control demo" data-position="top right" value="#0088cc">
+                                </div>
+                            </div>
+
+                            <!-- Hidden Background picture-->
+
+                            <div class="col-md-12">
+
+                                <div class="checkbox">
+                                    <label data-toggle="collapse" data-target="#bgpicture">
+                                        <input type="checkbox"/>
+                                        Incluir imagen de fondo
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div id="bgpicture" class="panel-collapse collapse">
+
+                                <div class="form-group">
+
+                                    <div class="col-md-9">
+                                        <input type="file" id="example-file-input" name="example-file-input"></div>
+
+                                </div>
+
+                                <div class="alert alert-info alert-dismissable">
+
+                                    <h4>
+                                        <i class="fa fa-info-circle"></i>
+                                        Tamaño del logo
+                                    </h4>
+                                    Today is a nice
+                                    <a href="javascript:void(0)" class="alert-link">day</a>
+                                    !
+                                </div>
+
+                                <div class="checkbox">
+                                    <label for="example-checkbox2">
+                                        <input type="checkbox" id="example-checkbox2" name="example-checkbox2" value="option2">Repetir imagen de fondo</label>
+                                </div>
+
+                            </div>
+
+                            <!-- END Background picture--> </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- END Grid Blocks Block -->
+        </div>
+    </div>
+    <!-- END LAYOUT PORTLET-->
+</div>
+
+
+<div class="col-md-8 ">
+    <!-- BEGIN CATEGORY AND PRIVACY PORTLET-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <i class="fa fa-gift"></i>8. Privacidad
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <!-- Privacy Content -->
+
+            <div class="form-group">
+                <label class="" for="example-select">Su evento es público o privado</label>
+                <div class="col-md-4">
+                    <select id="example-select" name="example-select" class="form-control" size="1">
+                        <option value="0">Escoja una opción</option>
+                        <option value="1">Público</option>
+                        <option value="2">Privado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Categoria Principal</label>
+                <div class="col-md-4">
+                    <select id="example-select" name="example-select" class="form-control" size="1">
+                        <option value="0">Escoja una opción</option>
+                        <option value="1">Option #1</option>
+                        <option value="2">Option #2</option>
+                        <option value="3">Option #3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <select id="example-select" name="example-select" class="form-control" size="1">
+                        <option value="0">Segunda opción (opcional)</option>
+                        <option value="1">Option #1</option>
+                        <option value="2">Option #2</option>
+                        <option value="3">Option #3</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- END Privacy Content -->
+        </div>
+    </div>
+    <!-- END CATEGORY AND PRIVACY PORTLET-->
+</div>
+
+</div>
+</div>
+</div>
+<!-- END MAIN PORTLET-->
+</div>
+
+</div>
+
+<!-- END PAGE CONTENT INNER -->
+
+
+<!-- BEGIN ACTION BLOCK -->
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet box red-sunglo" style="margin-top: -45px;border: none;">
+
+            <div class="panel-body form" style="padding: 30px;border-radius: 4px 4px 4px 4px;">
+
+
+                <div class="form-actions">
+                    <div class="col-md-4 text-center">
+                        <h4 class="block">Como quedó mi página?</h4>
+                        <a href="javascript:;" class="btn btn-lg default">
+                            Previsualizar <i class="fa fa-user"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h4 class="block">Dejar así y publicar más tarde</h4>
+                        <a href="javascript:;" class="btn btn-lg yellow">
+                            Guardar como borrador <i class="fa fa-user"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h4 class="block">Quiero publicarla ahora mismo!</h4>
+                        <a href="javascript:;" class="btn btn-lg green">
+                            Guardar y publicar <i class="fa fa-user"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+    </div>
+
+</div>
+
+<!-- END ACTION BLOCK -->
+
+
+</div>
+</div>
+<!-- END PAGE CONTENT -->
+
+<!-- START CONFIRM DELETION MODAL -->
+
+<div id="modal-regular2" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="cancelDeletion();" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 class="modal-title">Modal Title</h3>
+            </div>
+            <div class="modal-body">
+                Esta seguro que desea eliminar este tiquete? Tiene mas reversa la cagada de un tullido.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" onclick="cancelDeletion();">Cancelar</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="Javascript:deleteRow(this)">Si, estoy seguro</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END CONFIRM DELETION MODAL -->
+
+
+</div>
+<!-- BEGIN PRE-FOOTER -->
+<div class="page-prefooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam dolore.
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs12 footer-block">
+                <h2>Subscribe Email</h2>
+                <div class="subscribe-form">
+                    <form action="javascript:;">
+                        <div class="input-group">
+                            <input type="text" placeholder="mail@email.com" class="form-control">
+							<span class="input-group-btn">
+							<button class="btn" type="submit">Submit</button>
+							</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+                <h2>Follow Us On</h2>
+                <ul class="social-icons">
+                    <li>
+                        <a href="javascript:;" data-original-title="rss" class="rss"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="facebook" class="facebook"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="twitter" class="twitter"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="googleplus" class="googleplus"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="linkedin" class="linkedin"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="youtube" class="youtube"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-original-title="vimeo" class="vimeo"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+                <h2>Contacts</h2>
+                <address class="margin-bottom-40">
+                    Phone: 800 123 3456<br>
+                    Email: <a href="mailto:info@metronic.com">info@metronic.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PRE-FOOTER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+    <div class="container">
+        2014 &copy; Metronic. All Rights Reserved.
+    </div>
+</div>
+<div class="scroll-to-top">
+    <i class="icon-arrow-up"></i>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="../../assets/global/plugins/respond.min.js"></script>
+<script src="../../assets/global/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="{{ asset('tm/assets/global/plugins/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/jquery-migrate.min.js') }}" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="{{ asset('tm/assets/global/plugins/jquery-ui/jquery-ui.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/jquery.cokie.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
+<script src="{{ asset('tm/assets/global/plugins/bootstrap-markdown/lib/markdown.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/global/plugins/bootstrap-summernote/summernote.min.js') }}" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/clockface/js/clockface.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-daterangepicker/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('tm/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+<script src="{{ asset('tm/assets/global/plugins/jquery-minicolors/jquery.minicolors.min.js') }}" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+
+<script src="{{ asset('tm/assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/admin/layout3/scripts/layout.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/admin/layout3/scripts/demo.js') }}" type="text/javascript"></script>
+<script src="{{ asset('tm/assets/admin/pages/scripts/components-editors.js') }}"></script>
+<script src="{{ asset('tm/assets/admin/pages/scripts/components-pickers.js') }}"></script>
+<script src="{{ asset('tm/assets/admin/pages/scripts/components-form-tools2.js') }}"></script>
 <script>
-    $.widget.bridge('uibutton', $.ui.button);
+    jQuery(document).ready(function() {
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        Demo.init(); // init demo features
+        ComponentsEditors.init();
+        ComponentsPickers.init();
+
+    });
 </script>
-<!-- Bootstrap 3.3.2 JS -->
-<script src="{{ asset('tm/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<!-- Morris.js charts -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js') }}"></script>
-<script src="{{ asset('tm/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
-<!-- Sparkline -->
-<script src="{{ asset('tm/plugins/sparkline/jquery.sparkline.min.js') }}" type="text/javascript"></script>
-<!-- jvectormap -->
-<script src="{{ asset('tm/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('tm/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}" type="text/javascript"></script>
-<!-- jQuery Knob Chart -->
-<script src="{{ asset('tm/plugins/knob/jquery.knob.js') }}" type="text/javascript"></script>
-<!-- daterangepicker -->
-<script src="{{ asset('tm/plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
-<!-- datepicker -->
-<script src="{{ asset('tm/plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="{{ asset('tm/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}" type="text/javascript"></script>
-<!-- iCheck -->
-<script src="{{ asset('tm/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
-<!-- Slimscroll -->
-<script src="{{ asset('tm/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('tm/dist/js/app.min.js') }}" type="text/javascript"></script>
 
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('tm/dist/js/pages/dashboard.js') }}" type="text/javascript"></script>
 
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('tm/dist/js/demo.js') }}" type="text/javascript"></script>
+<!-- Create and edit ticket javascript code-->
+<script src="{{ asset('tm/assets/global/scripts/ticket.js') }}"></script>
+<script src="{{ asset('tm/assets/global/scripts/ticket-creator.js') }}"></script>
+
+<script>
+
+    $(function() {
+        $('.select-select2').change(function() {
+            $('#register-new-location').toggle($(this).val() == 2);
+        });
+    });
+
+</script>
+
+<script>
+    var classes = {
+        deleteMe: 'delete-me'
+    };
+
+    var creator = new TicketCreator(editTicket, markRowForDeletion);
+
+    $(function() {
+        creator.tickets.push(new Ticket({
+            ticketType: 'Resuelto: collapse "Opciones avanzadas"',
+            price: 50,
+            quantity: 30,
+            onlyForGuests: true,
+            inviteByEmail: true,
+        }));
+
+        creator.tickets.push(new Ticket({
+            ticketType: 'Resuelto: selección "invitar por e-mail o por link personal"',
+            price: 50,
+            quantity: 30,
+            onlyForGuests: true,
+            inviteByPersonalLink: true,
+        }));
+
+        creator.tickets.push(new Ticket({
+            ticketType: 'Resuelto: collapse "Privacidad"',
+            price: 50,
+            quantity: 60,
+            absorbServiceFee: true
+        }));
+
+        creator.updateTicketTable();
+        creator.createTicket();
+    });
+
+
+    $(function() {
+        $('.select-chosen').change(function() {
+            $('#register-new-organizer').toggle($(this).val() == 2);
+        });
+
+        $('#modal-regular2').on('hidden.bs.modal', cancelDeletion);
+    });
+
+
+    function editTicket() {
+        var numFila = $(this).parent().parent().parent().children().index($(this).parent().parent());
+        creator.loadTicket(numFila);
+    }
+
+    function deleteRow()
+    {
+        var numFila = $(selectors.classDeleteMe).parent().parent().parent().children().index($(selectors.classDeleteMe).parent().parent());
+        creator.deleteTicket(numFila);
+        $('#modal-regular2').modal('hide');
+    }
+
+    function markRowForDeletion()
+    {
+        $(this).addClass(classes.deleteMe);
+    }
+
+    function cancelDeletion()
+    {
+        $(selectors.classDeleteMe).removeClass(classes.deleteMe);
+    }
+
+</script>
+
+
+<!-- END JAVASCRIPTS -->
 </body>
+<!-- END BODY -->
 </html>
